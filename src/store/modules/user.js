@@ -5,7 +5,7 @@ const user = {
     userInfo: sessionStorage.getItem("userInfo")
       ? JSON.parse(sessionStorage.getItem("userInfo"))
       : {},
-    reqestPromise: null,
+    requestPromise: null,
     baInfo: sessionStorage.getItem("baInfo")
       ? JSON.parse(sessionStorage.getItem("baInfo"))
       : {},
@@ -18,9 +18,9 @@ const user = {
   },
   actions: {
     login({ state }) {
-      if (state.reqestPromise) return state.reqestPromise;
+      if (state.requestPromise) return state.requestPromise;
       let fn = async function () {};
-      return (state.reqestPromise = fn());
+      return (state.requestPromise = fn());
     },
   },
   getters: {},
